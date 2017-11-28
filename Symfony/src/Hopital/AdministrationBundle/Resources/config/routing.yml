@@ -1,3 +1,14 @@
 hopital_administration_homepage:
     path:     /accueil
     defaults: { _controller: HopitalAdministrationBundle:Default:index }
+hopital_administration_viewPatient:
+    path:     /patient
+    defaults: { _controller: HopitalAdministrationBundle:Default:patient }
+hopital_administration_modifPatient:
+    path:     /modifPatient
+    defaults: { _controller: HopitalAdministrationBundle:Default:modifPatient }
+hopital_administration_sejour:
+    path:     /sejour
+    defaults: { _controller: HopitalAdministrationBundle:Default:sejour }
+
+

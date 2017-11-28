@@ -34,6 +34,13 @@ class Sejour
      * @ORM\Column(name="dateFin", type="date", nullable=true)
      */
     private $dateFin;
+	
+	/**
+	*@var Patient $lepatient
+	
+	*@ORM\ManyToOne(targetEntity="Patient")
+	*/
+	private $lepatient;
 
 
     /**

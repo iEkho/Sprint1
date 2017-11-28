@@ -1,3 +1,7 @@
+hopital_administration:
+    resource: "@HopitalAdministrationBundle/Resources/config/routing.yml"
+    prefix:   /administration/
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
