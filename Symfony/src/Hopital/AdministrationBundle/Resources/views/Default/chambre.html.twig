@@ -6,12 +6,12 @@
 {% for chambre in lesChambres %}
 <tr>
 	<td>{{chambre.getLibelle()}}</td>
-	<td>{{chambre.getId
+	<td>{{chambre.getLeservice().getLibelle()}}</td>
 	<td><a href="{{path('hopital_administration_modifService',{id:service.getId()})}}"> Modifier</a></td>
 	<td><a href="{{path('hopital_administration_suppService',{id:service.getId()})}}"> Supprimer</a></td>
 </tr>
 {% else %}
-<tr><td>Pas de services.</td></tr>
+<tr><td>Pas de chambres.</td></tr>
 {% endfor %}
 </table>
 {% endblock %}
