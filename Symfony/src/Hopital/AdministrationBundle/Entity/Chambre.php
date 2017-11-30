@@ -79,7 +79,7 @@ class Chambre
     public function setLeservice(\Hopital\AdministrationBundle\Entity\Service $leservice = null)
     {
         $this->leservice = $leservice;
-    
+
         return $this;
     }
 
