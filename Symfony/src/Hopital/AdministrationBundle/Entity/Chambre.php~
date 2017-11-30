@@ -68,28 +68,4 @@ class Chambre
     {
         return $this->libelle;
     }
-
-    /**
-     * Set leservice
-     *
-     * @param \Hopital\AdministrationBundle\Entity\Service $leservice
-     *
-     * @return Chambre
-     */
-    public function setLeservice(\Hopital\AdministrationBundle\Entity\Service $leservice = null)
-    {
-        $this->leservice = $leservice;
-    
-        return $this;
-    }
-
-    /**
-     * Get leservice
-     *
-     * @return \Hopital\AdministrationBundle\Entity\Service
-     */
-    public function getLeservice()
-    {
-        return $this->leservice;
-    }
 }
