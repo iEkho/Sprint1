@@ -161,4 +161,23 @@ class DefaultController extends Controller
 		  $lesSejours=$repository->findAll();
 		  return $this->render('HopitalAdministrationBundle:Default:viewsejour.html.twig',array('lesSejours'=>$lesSejours));
 	  }
+    public function newServiceAction (Request $request)
+      {
+        $unService = new Service();
+        $formBuilder=$this->createFormBuilder($unService);
+        $formBuilder->add('libelle','text',array('label'=>'Saisir le nom du service'));
+        $formBuilder->add('Ajouter','submit');
+        $form=$formBuilder->getForm();
+        if($request->getMethod()=='POST')
+        {
+          $form->bind($request);
+          if($form->isValid())
+          {
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($unService);
+            $em->flush();
+          }
+        }
+        return $this->render('HopitalAdministrationBundle:Default:newService.html.twig',array('form' => $form ->createView()));
+      }
 }
