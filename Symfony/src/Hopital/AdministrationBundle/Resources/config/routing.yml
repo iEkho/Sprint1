@@ -37,3 +37,6 @@ hopital_administration_suppService:
 hopital_administration_newservice:
     path:     /newservice
     defaults: { _controller: HopitalAdministrationBundle:Default:newservice }
+hopital_administration_newChambre:
+    path:     /newChambre
+    defaults: { _controller: HopitalAdministrationBundle:Default:newChambre }

@@ -37,6 +37,26 @@ class DefaultController extends Controller
 		$lesChambres=$repository->findAll();
 		return $this->render('HopitalAdministrationBundle:Default:chambre.html.twig',array('lesChambres'=>$lesChambres));
 	  }
+	  
+	  public function newChambreAction()
+	  {
+		$uneChambre=new Chambre();
+		$formbuilder=$this->createFormBuilder($uneChambre);
+		$formbuilder->add('leservice','entity',array('class'=>'HopitalAdministrationBundle:Service','property'=>'libelle'));
+		$formbuilder->add('libelle','text',array('label'=>'Saisir le nom de la chambre'));
+		$formbuilder->add('ajouter','submit');
+		$form=$formbuilder->getForm();
+		if($request->getMethod()=='POST'){
+			$form->bind($request);
+			if($form->isValid())
+			{
+			$em = $this->getDoctrine()->getManager();
+			$em->persist($uneChambre);
+			$em->flush();
+			}
+		}
+      return $this->render('HopitalAdministrationBundle:Default:newChambre.html.twig',array('form' => $form ->createView()));
+		}
     public function modifPatientAction(Request $request)
     {
       $id=$request->query->get('id');
