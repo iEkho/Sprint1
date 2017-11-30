@@ -34,3 +34,6 @@ hopital_administration_modifService:
 hopital_administration_suppService:
     path:     /suppService
     defaults: { _controller: HopitalAdministrationBundle:Default:suppService }
+hopital_administration_newservice:
+    path:     /newservice
+    defaults: { _controller: HopitalAdministrationBundle:Default:newservice }

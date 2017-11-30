@@ -1,0 +1,7 @@
+{% extends 'HopitalAdministrationBundle:Default:index.html.twig' %}
+{% block corps %}
+<h2>Formulaire d'ajout de service</h2>
+<form action="{{path('hopital_administration_newservice')}}" method="post">
+  {{form_widget(form)}}
+</form>
+{% endblock %}
