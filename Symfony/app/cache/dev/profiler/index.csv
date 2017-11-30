@@ -91,3 +91,11 @@ c1e45b,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/p
 5dec8f,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/patient,1511879382,ab5ca6,200
 ab5ca6,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/patient,1511879382,,500
 13a1a1,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/patient,1511879397,,200
+c24447,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/accueil,1512032819,74e015,200
+74e015,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/accueil,1512032822,,500
+9e8378,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/_wdt/74e015,1512032823,df763f,200
+df763f,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/_wdt/74e015,1512032823,,500
+17cd9b,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/accueil,1512032984,428ef3,200
+428ef3,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/accueil,1512032984,,500
+7229cc,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/_wdt/428ef3,1512032986,c57f7e,200
+c57f7e,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/_wdt/428ef3,1512032986,,500
