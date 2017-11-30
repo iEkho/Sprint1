@@ -34,7 +34,7 @@ class Sejour
      * @ORM\Column(name="dateFin", type="date", nullable=true)
      */
     private $dateFin;
-	
+
 	/**
      * @var int
      *
@@ -48,6 +48,13 @@ class Sejour
 	*@ORM\ManyToOne(targetEntity="Patient")
 	*/
 	private $lepatient;
+
+  /**
+  *@var Chambre $lachambre
+
+  *@ORM\ManyToOne(targetEntity="Chambre")
+  */
+  private $lachambre;
 
 
     /**
@@ -142,7 +149,7 @@ class Sejour
     public function setNumLit($numLit)
     {
         $this->numLit = $numLit;
-    
+
         return $this;
     }
 
