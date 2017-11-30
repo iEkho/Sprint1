@@ -24,6 +24,10 @@ class DefaultController extends Controller
 	  public function serviceAction()
 	  {
 		$doctrine=$this->getDoctrine();
+		$entityManager=$doctrine->getManager();
+		$repository=$entityManager->getRepository('HopitalAdministrationBundle:Service');
+		$lesServices=$repository->findAll();
+		return $this->render('HopitalAdministrationBundle:Default:service.html.twig',array('lesServices'=>$lesServices));
 	  }
     public function modifPatientAction(Request $request)
     {
