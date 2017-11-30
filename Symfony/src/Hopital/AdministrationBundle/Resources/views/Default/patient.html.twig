@@ -1,4 +1,5 @@
-{% block body %}
+{% extends 'HopitalAdministrationBundle:Default:index.html.twig' %}
+{% block corps %}
 <h2>Les patients</h2>
 <table>
 <tr><th>Nom</th><th>Prénom</th><th>Date de naissance</th><th>adresse</th><th>Numéro sécu</th><th>mail</th><th>Assurance</th></tr>
@@ -12,6 +13,7 @@
 	<td>{{patient.getMail()}}</td>
 	<td>{{patient.getestAssure()}}</td>
 	<td><a href="{{path('hopital_administration_modifPatient',{id:patient.getId()})}}"> Modifier</a></td>
+	<td><a href="{{path('hopital_administration_suppPatient',{id:patient.getId()})}}"> Supprimer</a></td>
 </tr>
 {% else %}
 <tr><td>Pas de patients.</td></tr>

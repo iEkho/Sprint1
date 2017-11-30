@@ -4,11 +4,24 @@ hopital_administration_homepage:
 hopital_administration_viewPatient:
     path:     /patient
     defaults: { _controller: HopitalAdministrationBundle:Default:patient }
+hopital_administration_newpatient:
+    path:     /newpatient
+    defaults: { _controller: HopitalAdministrationBundle:Default:newpatient }
 hopital_administration_modifPatient:
     path:     /modifPatient
     defaults: { _controller: HopitalAdministrationBundle:Default:modifPatient }
-hopital_administration_sejour:
-    path:     /sejour
-    defaults: { _controller: HopitalAdministrationBundle:Default:sejour }
-
-
+hopital_administration_newsejour:
+    path:     /newsejour
+    defaults: { _controller: HopitalAdministrationBundle:Default:newsejour }
+hopital_administration_viewsejour:
+    path:     /viewsejour
+    defaults: { _controller: HopitalAdministrationBundle:Default:viewsejour }
+hopital_administration_modifSejour:
+    path:     /modifSejour
+    defaults: { _controller: HopitalAdministrationBundle:Default:modifSejour }
+hopital_administration_suppPatient:
+    path:     /suppPatient
+    defaults: { _controller: HopitalAdministrationBundle:Default:suppPatient }
+hopital_administration_suppSejour:
+    path:     /suppSejour
+    defaults: { _controller: HopitalAdministrationBundle:Default:suppSejour }

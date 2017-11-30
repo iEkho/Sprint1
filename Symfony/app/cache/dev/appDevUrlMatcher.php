@@ -111,9 +111,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::indexAction',  '_route' => 'hopital_administration_homepage',);
             }
 
-            // hopital_administration_patient
+            // hopital_administration_viewPatient
             if ($pathinfo === '/administration/patient') {
-                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::patientAction',  '_route' => 'hopital_administration_patient',);
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::patientAction',  '_route' => 'hopital_administration_viewPatient',);
+            }
+
+            // hopital_administration_newpatient
+            if ($pathinfo === '/administration/newpatient') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::newpatientAction',  '_route' => 'hopital_administration_newpatient',);
             }
 
             // hopital_administration_modifPatient
@@ -121,9 +126,32 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::modifPatientAction',  '_route' => 'hopital_administration_modifPatient',);
             }
 
-            // hopital_administration_sejour
-            if ($pathinfo === '/administration/sejour') {
-                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::sejourAction',  '_route' => 'hopital_administration_sejour',);
+            // hopital_administration_newsejour
+            if ($pathinfo === '/administration/newsejour') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::newsejourAction',  '_route' => 'hopital_administration_newsejour',);
+            }
+
+            // hopital_administration_viewsejour
+            if ($pathinfo === '/administration/viewsejour') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::viewsejourAction',  '_route' => 'hopital_administration_viewsejour',);
+            }
+
+            // hopital_administration_modifSejour
+            if ($pathinfo === '/administration/modifSejour') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::modifSejourAction',  '_route' => 'hopital_administration_modifSejour',);
+            }
+
+            if (0 === strpos($pathinfo, '/administration/supp')) {
+                // hopital_administration_suppPatient
+                if ($pathinfo === '/administration/suppPatient') {
+                    return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppPatientAction',  '_route' => 'hopital_administration_suppPatient',);
+                }
+
+                // hopital_administration_suppSejour
+                if ($pathinfo === '/administration/suppSejour') {
+                    return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppSejourAction',  '_route' => 'hopital_administration_suppSejour',);
+                }
+
             }
 
         }
