@@ -29,6 +29,14 @@ class DefaultController extends Controller
 		$lesServices=$repository->findAll();
 		return $this->render('HopitalAdministrationBundle:Default:service.html.twig',array('lesServices'=>$lesServices));
 	  }
+	  public function chambreAction()
+	  {
+	    $doctrine=$this->getDoctrine();
+		$entityManager=$doctrine->getManager();
+		$repository=$entityManager->getRepository('HopitalAdministrationBundle:Chambre');
+		$lesChambres=$repository->findAll();
+		return $this->render('HopitalAdministrationBundle:Default:chambre.html.twig',array('lesChambres'=>$lesChambres));
+	  }
     public function modifPatientAction(Request $request)
     {
       $id=$request->query->get('id');
