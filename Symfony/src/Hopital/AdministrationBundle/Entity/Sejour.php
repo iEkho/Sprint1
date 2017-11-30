@@ -34,6 +34,13 @@ class Sejour
      * @ORM\Column(name="dateFin", type="date", nullable=true)
      */
     private $dateFin;
+	
+	/**
+     * @var int
+     *
+     * @ORM\Column(name="numLit", type="integer")
+     */
+    private $numLit;
 
 	/**
 	*@var Patient $lepatient
@@ -123,5 +130,29 @@ class Sejour
     public function getLepatient()
     {
         return $this->lepatient;
+    }
+
+    /**
+     * Set numLit
+     *
+     * @param integer $numLit
+     *
+     * @return Sejour
+     */
+    public function setNumLit($numLit)
+    {
+        $this->numLit = $numLit;
+    
+        return $this;
+    }
+
+    /**
+     * Get numLit
+     *
+     * @return integer
+     */
+    public function getNumLit()
+    {
+        return $this->numLit;
     }
 }
