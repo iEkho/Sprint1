@@ -1,0 +1,7 @@
+{% extends 'HopitalAdministrationBundle:Default:index.html.twig' %}
+{% block corps %}
+<h2>Formulaire d'ajout de chambre</h2>
+<form action="{{path('hopital_administration_newChambre')}}" method="post">
+  {{form_widget(form)}}
+</form>
+{% endblock %}
