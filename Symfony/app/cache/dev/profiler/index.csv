@@ -195,3 +195,7 @@ e1dd05,::1,GET,http://localhost/Symfonyavecfrancois/Sprint1/Symfony/web/app_dev.
 58dc27,::1,GET,http://localhost/Symfonyavecfrancois/Sprint1/Symfony/web/app_dev.php/administration/suppPatient?id=3,1511985043,,302
 bcfb1b,::1,GET,http://localhost/Symfonyavecfrancois/Sprint1/Symfony/web/app_dev.php/administration/patient,1511985044,,200
 4c4557,::1,GET,http://localhost/Symfonyavecfrancois/Sprint1/Symfony/web/app_dev.php/administration/viewsejour,1511985046,,200
+f2b7ae,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/accueil,1512036090,,200
+a070f5,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/patient,1512036095,,200
+34a09a,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/suppPatient?id=1,1512036104,,302
+45c251,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/patient,1512036105,,200
