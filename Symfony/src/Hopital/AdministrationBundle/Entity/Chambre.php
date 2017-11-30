@@ -28,6 +28,12 @@ class Chambre
      */
     private $libelle;
 
+    /**
+    *@var Service $leservice
+  
+    *@ORM\ManyToOne(targetEntity="Service")
+    */
+    private $leservice;
 
     /**
      * Get id
@@ -49,7 +55,7 @@ class Chambre
     public function setLibelle($libelle)
     {
         $this->libelle = $libelle;
-    
+
         return $this;
     }
 
@@ -63,4 +69,3 @@ class Chambre
         return $this->libelle;
     }
 }
-
