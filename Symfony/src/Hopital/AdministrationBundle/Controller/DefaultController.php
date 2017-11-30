@@ -136,6 +136,7 @@ class DefaultController extends Controller
       $unPatient=$repository->find($id);
       $formbuilder=$this->createFormBuilder($unSejour);
       $formbuilder->add('lepatient','entity',array('class'=>'HopitalAdministrationBundle:Patient','property'=>'nom'));
+      $formbuilder->add('numLit','int',array('label'=>'Saisir le numéro de lit'));
       $formbuilder->add('dateDebut','date',array('label'=>'Saisir la date de début'));
       $formbuilder->add('dateFin','date',array('label'=>'Saisir la date de fin (ne rien saisir si séjour non terminé)'));
       $formbuilder->add('save','submit');
