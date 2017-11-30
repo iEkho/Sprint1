@@ -37,7 +37,7 @@ class DefaultController extends Controller
 		$lesChambres=$repository->findAll();
 		return $this->render('HopitalAdministrationBundle:Default:chambre.html.twig',array('lesChambres'=>$lesChambres));
 	  }
-	  
+
 	  public function newChambreAction()
 	  {
 		$uneChambre=new Chambre();
@@ -132,6 +132,7 @@ class DefaultController extends Controller
       $formbuilder=$this->createFormBuilder($unSejour);
       $formbuilder->add('lepatient','entity',array('class'=>'HopitalAdministrationBundle:Patient','property'=>'nom'));
       $formbuilder->add('numLit','int',array('label'=>'Saisir le numéro de lit'));
+      $formbuilder->add('lachambre','entity',array('class'=>'HopitalAdministrationBundle:Chambre','property'=>'libelle'));
       $formbuilder->add('dateDebut','date',array('label'=>'Saisir la date de début'));
       $formbuilder->add('dateFin','date',array('label'=>'Saisir la date de fin (ne rien saisir si séjour non terminé)'));
       $formbuilder->add('save','submit');
@@ -157,6 +158,7 @@ class DefaultController extends Controller
       $formbuilder=$this->createFormBuilder($unSejour);
       $formbuilder->add('lepatient','entity',array('class'=>'HopitalAdministrationBundle:Patient','property'=>'nom'));
       $formbuilder->add('numLit','int',array('label'=>'Saisir le numéro de lit'));
+      $formbuilder->add('lachambre','entity',array('class'=>'HopitalAdministrationBundle:Chambre','property'=>'libelle'));
       $formbuilder->add('dateDebut','date',array('label'=>'Saisir la date de début'));
       $formbuilder->add('dateFin','date',array('label'=>'Saisir la date de fin (ne rien saisir si séjour non terminé)'));
       $formbuilder->add('save','submit');

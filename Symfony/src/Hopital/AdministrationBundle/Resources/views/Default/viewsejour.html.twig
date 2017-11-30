@@ -2,12 +2,13 @@
 {% block corps %}
 <h2>Les séjours</h2>
 <table>
-<tr><th>Patient concerné</th><th>Date de début</th><th>Date de fin</th></tr>
+<tr><th>Patient concerné</th><th>Date de début</th><th>Date de fin</th><th>Chambre</th><th>Numéro de lit</th></tr>
 {% for sejour in lesSejours %}
 <tr>
 	<td>{{sejour.getLePatient().getNom()}}{{sejour.getLePatient().getPrenom()}}</td>
 	<td>{{sejour.getDateDebut()|date("d-m-Y")}}</td>
 	<td>{{sejour.getDateFin()|date("d-m-Y")}}</td>
+	<td>{{sejour.getLachambre().getLibelle()}}</td>
 	<td>{{sejour.getNumLit()}}</td>
 	<td><a href="{{path('hopital_administration_modifSejour',{id:sejour.getId()})}}"> Modifier</a></td>
 	<td><a href="{{path('hopital_administration_suppSejour',{id:sejour.getId()})}}"> Supprimer</a></td>

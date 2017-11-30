@@ -162,4 +162,28 @@ class Sejour
     {
         return $this->numLit;
     }
+
+    /**
+     * Set lachambre
+     *
+     * @param \Hopital\AdministrationBundle\Entity\Chambre $lachambre
+     *
+     * @return Sejour
+     */
+    public function setLachambre(\Hopital\AdministrationBundle\Entity\Chambre $lachambre = null)
+    {
+        $this->lachambre = $lachambre;
+    
+        return $this;
+    }
+
+    /**
+     * Get lachambre
+     *
+     * @return \Hopital\AdministrationBundle\Entity\Chambre
+     */
+    public function getLachambre()
+    {
+        return $this->lachambre;
+    }
 }
