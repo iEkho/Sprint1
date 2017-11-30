@@ -25,3 +25,6 @@ hopital_administration_suppPatient:
 hopital_administration_suppSejour:
     path:     /suppSejour
     defaults: { _controller: HopitalAdministrationBundle:Default:suppSejour }
+hopital_administration_viewService:
+    path:     /service
+    defaults: { _controller: HopitalAdministrationBundle:Default:service }

@@ -21,6 +21,10 @@ class DefaultController extends Controller
 		  $lesPatients=$repository->findAll();
 		  return $this->render('HopitalAdministrationBundle:Default:patient.html.twig',array('lesPatients'=>$lesPatients));
 	  }
+	  public function serviceAction()
+	  {
+		$doctrine=$this->getDoctrine();
+	  }
     public function modifPatientAction(Request $request)
     {
       $id=$request->query->get('id');
