@@ -69,6 +69,7 @@ class DefaultController extends Controller
 			$formBuilder=$this->createFormBuilder($uneChambre);
 			$formBuilder->add('libelle','text',array('label'=>'Saisir le nom de la chambre'));
 			$formBuilder->add('leservice','entity',array('class'=>'HopitalAdministrationBundle:Service','property'=>'libelle'));
+			$formBuilder->add('modifier','submit');
 			$form=$formBuilder->getForm();
 			if($request->getMethod()=='POST')
 			{
@@ -81,6 +82,28 @@ class DefaultController extends Controller
 				}
 			}
 			return $this->render('HopitalAdministrationBundle:Default:modifChambre.html.twig',array('form'=>$form->createView()));
+		}
+		public function modifServiceAction(Request $request)
+		{
+			$id=$request->query->get('id');
+			$em=$this->getDoctrine()->getManager();
+			$repository=$em->getRepository('HopitalAdministrationBundle:Service');
+			$unService=$repository->find($id);
+			$formBuilder=$this->createFormBuilder($unService);
+			$formBuilder->add('libelle','text',array('label'=>'Saisir le nom du service'));
+			$formBuilder->add('modifier','submit');
+			$form=$formBuilder->getForm();
+			if($request->getMethod()=='POST')
+			{
+				$form->bind($request);
+				if($form->isValid())
+				{
+					$em=$this->getDoctrine()->getManager();
+					$em->persist($unService);
+					$em->flush();
+				}
+			}
+			return $this->render('HopitalAdministrationBundle:Default:modifService.html.twig',array('form'=>$form->createView()));
 		}
     public function suppChambreAction(Request $request)
     {
@@ -121,7 +144,7 @@ class DefaultController extends Controller
       $formBuilder->add('adresse','text',array('label'=>'Saisir l\'adresse'));
       $formBuilder->add('numSecu','text',array('label'=>'Saisir le numéro de sécurité social'));
       $formBuilder->add('mail','text',array('label'=>'Saisir le mail'));
-      $formBuilder->add('estAssure','radio',array('label'=>'Cocher si il est assuré'));
+      $formBuilder->add('estAssure','checkbox',array('label'=>'Cocher si il est assuré'));
       $formBuilder->add('Mettre a jour','submit');
       $form=$formBuilder->getForm();
       if($request->getMethod()=='POST')
