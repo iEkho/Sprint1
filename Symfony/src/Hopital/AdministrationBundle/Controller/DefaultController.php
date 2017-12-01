@@ -47,7 +47,7 @@ class DefaultController extends Controller
 		$formbuilder->add('leservice','entity',array('class'=>'HopitalAdministrationBundle:Service','property'=>'libelle'));
 		$formbuilder->add('libelle','text',array('label'=>'Saisir le nom de la chambre'));
 		$formbuilder->add('ajouter','submit');
-		$form=$formBuilder->getForm();
+		$form=$formbuilder->getForm();
 		if($request->getMethod()=='POST'){
 			$form->bind($request);
 			if($form->isValid())

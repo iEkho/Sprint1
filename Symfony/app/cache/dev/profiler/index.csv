@@ -273,3 +273,13 @@ a516ae,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/s
 7b1891,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/suppService?id=1,1512122480,,500
 f41ea0,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/suppService?id=1,1512122539,,302
 a60f9c,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/service,1512122540,,200
+57258d,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/accueil,1512122653,,200
+224b2f,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/viewChambre,1512123102,,200
+37a75c,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/accueil,1512123106,,200
+9ff680,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/patient,1512123107,,200
+217711,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/viewsejour,1512123111,,200
+97833e,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/viewChambre,1512123119,,200
+ce7798,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/newservice,1512123125,,200
+9b24d9,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/newChambre,1512123127,84f036,200
+84f036,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/newChambre,1512123128,,500
+f4a9ec,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/newChambre,1512123145,,200
