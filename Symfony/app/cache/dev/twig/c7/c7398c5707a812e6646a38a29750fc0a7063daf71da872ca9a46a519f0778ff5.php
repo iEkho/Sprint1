@@ -22,20 +22,20 @@ class __TwigTemplate_7f1bb590a78e6fe007c1539aa458d64c63c36155d38a000ea7a3fb3ac85
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_de93eab2916cb926cf3798396a6b117542e91ee1cd9cbd4b547a58928987f379 = $this->env->getExtension("native_profiler");
-        $__internal_de93eab2916cb926cf3798396a6b117542e91ee1cd9cbd4b547a58928987f379->enter($__internal_de93eab2916cb926cf3798396a6b117542e91ee1cd9cbd4b547a58928987f379_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:index.html.twig"));
+        $__internal_ea8092255fb39276b3576ded8f6d1bbf3f8ed258b7152cf7f98c1b99ced31161 = $this->env->getExtension("native_profiler");
+        $__internal_ea8092255fb39276b3576ded8f6d1bbf3f8ed258b7152cf7f98c1b99ced31161->enter($__internal_ea8092255fb39276b3576ded8f6d1bbf3f8ed258b7152cf7f98c1b99ced31161_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_de93eab2916cb926cf3798396a6b117542e91ee1cd9cbd4b547a58928987f379->leave($__internal_de93eab2916cb926cf3798396a6b117542e91ee1cd9cbd4b547a58928987f379_prof);
+        $__internal_ea8092255fb39276b3576ded8f6d1bbf3f8ed258b7152cf7f98c1b99ced31161->leave($__internal_ea8092255fb39276b3576ded8f6d1bbf3f8ed258b7152cf7f98c1b99ced31161_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_310f828e1c649a649fe127128ed953a8498f35dae66a0983fa7f49ac73d48e26 = $this->env->getExtension("native_profiler");
-        $__internal_310f828e1c649a649fe127128ed953a8498f35dae66a0983fa7f49ac73d48e26->enter($__internal_310f828e1c649a649fe127128ed953a8498f35dae66a0983fa7f49ac73d48e26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_4d15fe620ccd9bb54e30986af50028f106eafb994c29f7ae9d4db4f5633730e2 = $this->env->getExtension("native_profiler");
+        $__internal_4d15fe620ccd9bb54e30986af50028f106eafb994c29f7ae9d4db4f5633730e2->enter($__internal_4d15fe620ccd9bb54e30986af50028f106eafb994c29f7ae9d4db4f5633730e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "<li><a href=\"";
@@ -51,24 +51,24 @@ class __TwigTemplate_7f1bb590a78e6fe007c1539aa458d64c63c36155d38a000ea7a3fb3ac85
         echo "\">Gestion des séjours</a></li>
 <li><a href=\"";
         // line 6
-        echo $this->env->getExtension('routing')->getPath("hopital_administration_newpatient", array());
-        echo "\">Nouveau patient</a></li>
+        echo $this->env->getExtension('routing')->getPath("hopital_administration_viewChambre", array());
+        echo "\">Gestion des chambres</a></li>
 <li><a href=\"";
         // line 7
-        echo $this->env->getExtension('routing')->getPath("hopital_administration_newsejour", array());
-        echo "\">Nouveau séjour</a></li>
-<li><a href=\"";
-        // line 8
         echo $this->env->getExtension('routing')->getPath("hopital_administration_viewService", array());
         echo "\">Gestion des services</a></li>
 <li><a href=\"";
+        // line 8
+        echo $this->env->getExtension('routing')->getPath("hopital_administration_newpatient", array());
+        echo "\">Nouveau patient</a></li>
+<li><a href=\"";
         // line 9
-        echo $this->env->getExtension('routing')->getPath("hopital_administration_newservice", array());
-        echo "\">Nouveau service</a></li>
+        echo $this->env->getExtension('routing')->getPath("hopital_administration_newsejour", array());
+        echo "\">Nouveau séjour</a></li>
 <li><a href=\"";
         // line 10
-        echo $this->env->getExtension('routing')->getPath("hopital_administration_viewChambre", array());
-        echo "\">Gestion des chambres</a></li>
+        echo $this->env->getExtension('routing')->getPath("hopital_administration_newservice", array());
+        echo "\">Nouveau service</a></li>
 <li><a href=\"";
         // line 11
         echo $this->env->getExtension('routing')->getPath("hopital_administration_newChambre", array());
@@ -82,18 +82,18 @@ class __TwigTemplate_7f1bb590a78e6fe007c1539aa458d64c63c36155d38a000ea7a3fb3ac85
         echo "</div>
 ";
         
-        $__internal_310f828e1c649a649fe127128ed953a8498f35dae66a0983fa7f49ac73d48e26->leave($__internal_310f828e1c649a649fe127128ed953a8498f35dae66a0983fa7f49ac73d48e26_prof);
+        $__internal_4d15fe620ccd9bb54e30986af50028f106eafb994c29f7ae9d4db4f5633730e2->leave($__internal_4d15fe620ccd9bb54e30986af50028f106eafb994c29f7ae9d4db4f5633730e2_prof);
 
     }
 
     // line 14
     public function block_corps($context, array $blocks = array())
     {
-        $__internal_ac5e83fd2d2572aa205239e0b3019da3886669948d20756844c412ea21d48efd = $this->env->getExtension("native_profiler");
-        $__internal_ac5e83fd2d2572aa205239e0b3019da3886669948d20756844c412ea21d48efd->enter($__internal_ac5e83fd2d2572aa205239e0b3019da3886669948d20756844c412ea21d48efd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
+        $__internal_9bb9b8fceaf0f0ead6d915045e47a63a4f7243e895af81fc8b5df93d0bd6c68e = $this->env->getExtension("native_profiler");
+        $__internal_9bb9b8fceaf0f0ead6d915045e47a63a4f7243e895af81fc8b5df93d0bd6c68e->enter($__internal_9bb9b8fceaf0f0ead6d915045e47a63a4f7243e895af81fc8b5df93d0bd6c68e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
 
         
-        $__internal_ac5e83fd2d2572aa205239e0b3019da3886669948d20756844c412ea21d48efd->leave($__internal_ac5e83fd2d2572aa205239e0b3019da3886669948d20756844c412ea21d48efd_prof);
+        $__internal_9bb9b8fceaf0f0ead6d915045e47a63a4f7243e895af81fc8b5df93d0bd6c68e->leave($__internal_9bb9b8fceaf0f0ead6d915045e47a63a4f7243e895af81fc8b5df93d0bd6c68e_prof);
 
     }
 
@@ -117,11 +117,11 @@ class __TwigTemplate_7f1bb590a78e6fe007c1539aa458d64c63c36155d38a000ea7a3fb3ac85
 /* <li><a href="{{path('hopital_administration_homepage',{})}}">Accueil</a></li>*/
 /* <li><a href="{{path('hopital_administration_viewPatient',{})}}">Gestion des patients</a></li>*/
 /* <li><a href="{{path('hopital_administration_viewsejour',{})}}">Gestion des séjours</a></li>*/
+/* <li><a href="{{path('hopital_administration_viewChambre',{})}}">Gestion des chambres</a></li>*/
+/* <li><a href="{{path('hopital_administration_viewService',{})}}">Gestion des services</a></li>*/
 /* <li><a href="{{path('hopital_administration_newpatient',{})}}">Nouveau patient</a></li>*/
 /* <li><a href="{{path('hopital_administration_newsejour',{})}}">Nouveau séjour</a></li>*/
-/* <li><a href="{{path('hopital_administration_viewService',{})}}">Gestion des services</a></li>*/
 /* <li><a href="{{path('hopital_administration_newservice',{})}}">Nouveau service</a></li>*/
-/* <li><a href="{{path('hopital_administration_viewChambre',{})}}">Gestion des chambres</a></li>*/
 /* <li><a href="{{path('hopital_administration_newChambre',{})}}">Nouvelle chambre</a></li>*/
 /* */
 /* <div id="corps">*/

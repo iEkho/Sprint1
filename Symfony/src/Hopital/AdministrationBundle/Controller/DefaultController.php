@@ -82,6 +82,19 @@ class DefaultController extends Controller
 			}
 			return $this->render('HopitalAdministrationBundle:Default:modifChambre.html.twig',array('form'=>$form->createView()));
 		}
+		public function suppServiceAction(Request $request)
+    {
+      $id=$request->query->get('id');
+      $em=$this->getDoctrine()->getManager();
+      $repository=$em->getRepository('HopitalAdministrationBundle:Patient');
+      $unPatient=$repository->find($id);
+      $query = $em->createQuery('DELETE FROM HopitalAdministrationBundle:Sejour S WHERE S.lepatient = :id');
+      $query->setParameter('id', $id);
+      $query->execute();
+      $em-> remove($unPatient);
+      $em->flush();
+      return $this->redirectToroute('hopital_administration_viewPatient');
+    }
     public function modifPatientAction(Request $request)
     {
       $id=$request->query->get('id');
@@ -95,7 +108,7 @@ class DefaultController extends Controller
       $formBuilder->add('adresse','text',array('label'=>'Saisir l\'adresse'));
       $formBuilder->add('numSecu','text',array('label'=>'Saisir le numéro de sécurité social'));
       $formBuilder->add('mail','text',array('label'=>'Saisir le mail'));
-      $formBuilder->add('estAssure','checkbox',array('label'=>'Cocher si il est assuré'));
+      $formBuilder->add('estAssure','radio',array('label'=>'Cocher si il est assuré'));
       $formBuilder->add('Mettre a jour','submit');
       $form=$formBuilder->getForm();
       if($request->getMethod()=='POST')
@@ -174,15 +187,15 @@ class DefaultController extends Controller
       return $this->render('HopitalAdministrationBundle:Default:newsejour.html.twig',array('form' => $form ->createView()));
     }
 
-    public function modifsejourAction(Request $request)
+    public function modifSejourAction(Request $request)
     {
       $id=$request->query->get('id');
       $em=$this->getDoctrine()->getManager();
       $repository=$em->getRepository('HopitalAdministrationBundle:Sejour');
-      $unPatient=$repository->find($id);
+      $unSejour=$repository->find($id);
       $formbuilder=$this->createFormBuilder($unSejour);
       $formbuilder->add('lepatient','entity',array('class'=>'HopitalAdministrationBundle:Patient','property'=>'nom'));
-      $formbuilder->add('numLit','int',array('label'=>'Saisir le numéro de lit'));
+      $formbuilder->add('numLit','integer',array('label'=>'Saisir le numéro de lit'));
       $formbuilder->add('lachambre','entity',array('class'=>'HopitalAdministrationBundle:Chambre','property'=>'libelle'));
       $formbuilder->add('dateDebut','date',array('label'=>'Saisir la date de début'));
       $formbuilder->add('dateFin','date',array('label'=>'Saisir la date de fin (ne rien saisir si séjour non terminé)'));
@@ -197,7 +210,7 @@ class DefaultController extends Controller
           $em->flush();
         }
       }
-      return $this->render('HopitalAdministrationBundle:Default:newsejour.html.twig',array('form' => $form ->createView()));
+      return $this->render('HopitalAdministrationBundle:Default:modifSejour.html.twig',array('form' => $form ->createView()));
     }
     public function suppSejourAction(Request $request)
     {

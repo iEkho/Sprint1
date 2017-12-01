@@ -21,20 +21,20 @@ class __TwigTemplate_5848fc8ee47e77c1cbbb23a4d7f09a0dd04288167277fe83b19a9549a8d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c95296a0699068943b65503195a9d9c6dac872f45f425b09b38d8db668c6184d = $this->env->getExtension("native_profiler");
-        $__internal_c95296a0699068943b65503195a9d9c6dac872f45f425b09b38d8db668c6184d->enter($__internal_c95296a0699068943b65503195a9d9c6dac872f45f425b09b38d8db668c6184d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:viewsejour.html.twig"));
+        $__internal_60413f98ce9b217ded10b08913c2f83434a7344e4893095b31091082bce8e08f = $this->env->getExtension("native_profiler");
+        $__internal_60413f98ce9b217ded10b08913c2f83434a7344e4893095b31091082bce8e08f->enter($__internal_60413f98ce9b217ded10b08913c2f83434a7344e4893095b31091082bce8e08f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:viewsejour.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c95296a0699068943b65503195a9d9c6dac872f45f425b09b38d8db668c6184d->leave($__internal_c95296a0699068943b65503195a9d9c6dac872f45f425b09b38d8db668c6184d_prof);
+        $__internal_60413f98ce9b217ded10b08913c2f83434a7344e4893095b31091082bce8e08f->leave($__internal_60413f98ce9b217ded10b08913c2f83434a7344e4893095b31091082bce8e08f_prof);
 
     }
 
     // line 2
     public function block_corps($context, array $blocks = array())
     {
-        $__internal_23d18d3bfd4018987ff8bf61bd0587d667dbb9fdb5d725c61332031920b29754 = $this->env->getExtension("native_profiler");
-        $__internal_23d18d3bfd4018987ff8bf61bd0587d667dbb9fdb5d725c61332031920b29754->enter($__internal_23d18d3bfd4018987ff8bf61bd0587d667dbb9fdb5d725c61332031920b29754_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
+        $__internal_975a0df3395626e800fcb529d60b878a05373bc4cc27e578addd2234df780853 = $this->env->getExtension("native_profiler");
+        $__internal_975a0df3395626e800fcb529d60b878a05373bc4cc27e578addd2234df780853->enter($__internal_975a0df3395626e800fcb529d60b878a05373bc4cc27e578addd2234df780853_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
 
         // line 3
         echo "<h2>Les séjours</h2>
@@ -93,7 +93,7 @@ class __TwigTemplate_5848fc8ee47e77c1cbbb23a4d7f09a0dd04288167277fe83b19a9549a8d
         echo "</table>
 ";
         
-        $__internal_23d18d3bfd4018987ff8bf61bd0587d667dbb9fdb5d725c61332031920b29754->leave($__internal_23d18d3bfd4018987ff8bf61bd0587d667dbb9fdb5d725c61332031920b29754_prof);
+        $__internal_975a0df3395626e800fcb529d60b878a05373bc4cc27e578addd2234df780853->leave($__internal_975a0df3395626e800fcb529d60b878a05373bc4cc27e578addd2234df780853_prof);
 
     }
 
