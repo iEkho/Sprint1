@@ -268,3 +268,8 @@ b8e1e7,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/p
 9ae816,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/viewsejour,1512122132,,200
 7f89f2,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/modifSejour?id=6,1512122135,,200
 ddcde2,::1,POST,http://localhost/desprez/Symfony/web/app_dev.php/administration/modifSejour?id=6,1512122140,,200
+a516ae,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/service,1512122477,,200
+2e3cb5,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/suppService?id=1,1512122480,7b1891,200
+7b1891,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/suppService?id=1,1512122480,,500
+f41ea0,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/suppService?id=1,1512122539,,302
+a60f9c,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/service,1512122540,,200

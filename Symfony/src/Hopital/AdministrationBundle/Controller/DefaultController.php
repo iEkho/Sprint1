@@ -86,14 +86,14 @@ class DefaultController extends Controller
     {
       $id=$request->query->get('id');
       $em=$this->getDoctrine()->getManager();
-      $repository=$em->getRepository('HopitalAdministrationBundle:Patient');
-      $unPatient=$repository->find($id);
-      $query = $em->createQuery('DELETE FROM HopitalAdministrationBundle:Sejour S WHERE S.lepatient = :id');
+      $repository=$em->getRepository('HopitalAdministrationBundle:Service');
+      $unService=$repository->find($id);
+      $query = $em->createQuery('DELETE FROM HopitalAdministrationBundle:Chambre C WHERE C.leservice = :id');
       $query->setParameter('id', $id);
       $query->execute();
-      $em-> remove($unPatient);
+      $em-> remove($unService);
       $em->flush();
-      return $this->redirectToroute('hopital_administration_viewPatient');
+      return $this->redirectToroute('hopital_administration_viewService');
     }
     public function modifPatientAction(Request $request)
     {
