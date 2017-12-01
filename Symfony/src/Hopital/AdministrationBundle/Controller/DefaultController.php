@@ -59,7 +59,7 @@ class DefaultController extends Controller
 		}
       return $this->render('HopitalAdministrationBundle:Default:newChambre.html.twig',array('form' => $form ->createView()));
 		}
-		
+
 		public function modifChambreAction(Request $request)
 		{
 			$id=$request->query->get('id');
@@ -82,6 +82,19 @@ class DefaultController extends Controller
 			}
 			return $this->render('HopitalAdministrationBundle:Default:modifChambre.html.twig',array('form'=>$form->createView()));
 		}
+    public function suppChambreAction(Request $request)
+    {
+      $id=$request->query->get('id');
+      $em=$this->getDoctrine()->getManager();
+      $repository=$em->getRepository('HopitalAdministrationBundle:Chambre');
+      $unService=$repository->find($id);
+      $query = $em->createQuery('DELETE FROM HopitalAdministrationBundle:Sejour C WHERE C.lachambre = :id');
+      $query->setParameter('id', $id);
+      $query->execute();
+      $em-> remove($uneChambre);
+      $em->flush();
+      return $this->redirectToroute('hopital_administration_viewChambre');
+    }
 		public function suppServiceAction(Request $request)
     {
       $id=$request->query->get('id');
