@@ -40,3 +40,12 @@ hopital_administration_newservice:
 hopital_administration_newChambre:
     path:     /newChambre
     defaults: { _controller: HopitalAdministrationBundle:Default:newChambre }
+hopital_administration_viewChambre:
+    path:     /viewChambre
+    defaults: { _controller: HopitalAdministrationBundle:Default:Chambre }
+hopital_administration_modifChambre:
+    path:     /modifChambre
+    defaults: { _controller: HopitalAdministrationBundle:Default:modifChambre }
+hopital_administration_suppChambre:
+    path:     /suppChambre
+    defaults: { _controller: HopitalAdministrationBundle:Default:suppChambre }

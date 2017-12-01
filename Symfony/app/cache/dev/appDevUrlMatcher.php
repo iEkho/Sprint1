@@ -141,17 +141,63 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::modifSejourAction',  '_route' => 'hopital_administration_modifSejour',);
             }
 
-            if (0 === strpos($pathinfo, '/administration/supp')) {
-                // hopital_administration_suppPatient
-                if ($pathinfo === '/administration/suppPatient') {
-                    return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppPatientAction',  '_route' => 'hopital_administration_suppPatient',);
+            if (0 === strpos($pathinfo, '/administration/s')) {
+                if (0 === strpos($pathinfo, '/administration/supp')) {
+                    // hopital_administration_suppPatient
+                    if ($pathinfo === '/administration/suppPatient') {
+                        return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppPatientAction',  '_route' => 'hopital_administration_suppPatient',);
+                    }
+
+                    // hopital_administration_suppSejour
+                    if ($pathinfo === '/administration/suppSejour') {
+                        return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppSejourAction',  '_route' => 'hopital_administration_suppSejour',);
+                    }
+
                 }
 
-                // hopital_administration_suppSejour
-                if ($pathinfo === '/administration/suppSejour') {
-                    return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppSejourAction',  '_route' => 'hopital_administration_suppSejour',);
+                // hopital_administration_viewService
+                if ($pathinfo === '/administration/service') {
+                    return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::serviceAction',  '_route' => 'hopital_administration_viewService',);
                 }
 
+            }
+
+            // hopital_administration_modifService
+            if ($pathinfo === '/administration/modifService') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::modifServiceAction',  '_route' => 'hopital_administration_modifService',);
+            }
+
+            // hopital_administration_suppService
+            if ($pathinfo === '/administration/suppService') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppServiceAction',  '_route' => 'hopital_administration_suppService',);
+            }
+
+            if (0 === strpos($pathinfo, '/administration/new')) {
+                // hopital_administration_newservice
+                if ($pathinfo === '/administration/newservice') {
+                    return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::newserviceAction',  '_route' => 'hopital_administration_newservice',);
+                }
+
+                // hopital_administration_newChambre
+                if ($pathinfo === '/administration/newChambre') {
+                    return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::newChambreAction',  '_route' => 'hopital_administration_newChambre',);
+                }
+
+            }
+
+            // hopital_administration_viewChambre
+            if ($pathinfo === '/administration/viewChambre') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::ChambreAction',  '_route' => 'hopital_administration_viewChambre',);
+            }
+
+            // hopital_administration_modifChambre
+            if ($pathinfo === '/administration/modifChambre') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::modifChambreAction',  '_route' => 'hopital_administration_modifChambre',);
+            }
+
+            // hopital_administration_suppChambre
+            if ($pathinfo === '/administration/suppChambre') {
+                return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppChambreAction',  '_route' => 'hopital_administration_suppChambre',);
             }
 
         }

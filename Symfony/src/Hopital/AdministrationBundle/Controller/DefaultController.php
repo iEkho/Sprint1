@@ -5,6 +5,8 @@ namespace Hopital\AdministrationBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Hopital\AdministrationBundle\Entity\Patient;
 use Hopital\AdministrationBundle\Entity\Sejour;
+use Hopital\AdministrationBundle\Entity\Service;
+use Hopital\AdministrationBundle\Entity\Chambre;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
@@ -38,14 +40,14 @@ class DefaultController extends Controller
 		return $this->render('HopitalAdministrationBundle:Default:chambre.html.twig',array('lesChambres'=>$lesChambres));
 	  }
 
-	  public function newChambreAction()
+	  public function newChambreAction(Request $request)
 	  {
 		$uneChambre=new Chambre();
 		$formbuilder=$this->createFormBuilder($uneChambre);
 		$formbuilder->add('leservice','entity',array('class'=>'HopitalAdministrationBundle:Service','property'=>'libelle'));
 		$formbuilder->add('libelle','text',array('label'=>'Saisir le nom de la chambre'));
 		$formbuilder->add('ajouter','submit');
-		$form=$formbuilder->getForm();
+		$form=$formBuilder->getForm();
 		if($request->getMethod()=='POST'){
 			$form->bind($request);
 			if($form->isValid())
@@ -56,6 +58,29 @@ class DefaultController extends Controller
 			}
 		}
       return $this->render('HopitalAdministrationBundle:Default:newChambre.html.twig',array('form' => $form ->createView()));
+		}
+		
+		public function modifChambreAction(Request $request)
+		{
+			$id=$request->query->get('id');
+			$em=$this->getDoctrine()->getManager();
+			$repository=$em->getRepository('HopitalAdministrationBundle:Chambre');
+			$uneChambre=$repository->find($id);
+			$formBuilder=$this->createFormBuilder($uneChambre);
+			$formBuilder->add('libelle','text',array('label'=>'Saisir le nom de la chambre'));
+			$formBuilder->add('leservice','entity',array('class'=>'HopitalAdministrationBundle:Service','property'=>'libelle'));
+			$form=$formBuilder->getForm();
+			if($request->getMethod()=='POST')
+			{
+				$form->bind($request);
+				if($form->isValid())
+				{
+					$em=$this->getDoctrine()->getManager();
+					$em->persist($uneChambre);
+					$em->flush();
+				}
+			}
+			return $this->render('HopitalAdministrationBundle:Default:modifChambre.html.twig',array('form'=>$form->createView()));
 		}
     public function modifPatientAction(Request $request)
     {
@@ -131,7 +156,7 @@ class DefaultController extends Controller
       $unSejour=new Sejour();
       $formbuilder=$this->createFormBuilder($unSejour);
       $formbuilder->add('lepatient','entity',array('class'=>'HopitalAdministrationBundle:Patient','property'=>'nom'));
-      $formbuilder->add('numLit','int',array('label'=>'Saisir le numéro de lit'));
+      $formbuilder->add('numLit','integer',array('label'=>'Saisir le numéro de lit'));
       $formbuilder->add('lachambre','entity',array('class'=>'HopitalAdministrationBundle:Chambre','property'=>'libelle'));
       $formbuilder->add('dateDebut','date',array('label'=>'Saisir la date de début'));
       $formbuilder->add('dateFin','date',array('label'=>'Saisir la date de fin (ne rien saisir si séjour non terminé)'));
