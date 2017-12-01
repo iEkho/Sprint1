@@ -87,7 +87,7 @@ class DefaultController extends Controller
       $id=$request->query->get('id');
       $em=$this->getDoctrine()->getManager();
       $repository=$em->getRepository('HopitalAdministrationBundle:Chambre');
-      $unService=$repository->find($id);
+      $uneChambre=$repository->find($id);
       $query = $em->createQuery('DELETE FROM HopitalAdministrationBundle:Sejour C WHERE C.lachambre = :id');
       $query->setParameter('id', $id);
       $query->execute();
