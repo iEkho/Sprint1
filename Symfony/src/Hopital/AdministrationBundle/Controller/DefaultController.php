@@ -144,7 +144,7 @@ class DefaultController extends Controller
       $formBuilder->add('adresse','text',array('label'=>'Saisir l\'adresse'));
       $formBuilder->add('numSecu','text',array('label'=>'Saisir le numéro de sécurité social'));
       $formBuilder->add('mail','text',array('label'=>'Saisir le mail'));
-      $formBuilder->add('estAssure','checkbox',array('label'=>'Cocher si il est assuré'));
+      $formBuilder->add('estAssure','checkbox',array('label'=>'Cocher si il est assuré', 'required'=>false));
       $formBuilder->add('Mettre a jour','submit');
       $form=$formBuilder->getForm();
       if($request->getMethod()=='POST')
@@ -170,7 +170,7 @@ class DefaultController extends Controller
         $formBuilder->add('adresse','text',array('label'=>'Saisir l\'adresse'));
         $formBuilder->add('numSecu','text',array('label'=>'Saisir le numéro de sécurité social'));
         $formBuilder->add('mail','text',array('label'=>'Saisir le mail'));
-        $formBuilder->add('estAssure','checkbox',array('label'=>'Cocher si il est assuré'));
+        $formBuilder->add('estAssure','checkbox',array('label'=>'Cocher si il est assuré','required'=>false));
         $formBuilder->add('Ajouter','submit');
         $form=$formBuilder->getForm();
         if($request->getMethod()=='POST')
