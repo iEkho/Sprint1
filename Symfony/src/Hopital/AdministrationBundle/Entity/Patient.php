@@ -114,7 +114,7 @@ class Patient
      */
     public function setNom($nom)
     {
-        $this->nom = $nom;
+        $this->nom = strtoupper($nom);
 
         return $this;
     }
@@ -138,7 +138,7 @@ class Patient
      */
     public function setPrenom($prenom)
     {
-        $this->prenom = $prenom;
+        $this->prenom = ucfirst($prenom);
 
         return $this;
     }

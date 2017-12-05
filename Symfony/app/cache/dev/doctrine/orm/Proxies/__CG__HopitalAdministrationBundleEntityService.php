@@ -36,7 +36,7 @@ class Service extends \Hopital\AdministrationBundle\Entity\Service implements \D
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class Service extends \Hopital\AdministrationBundle\Entity\Service implements \D
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Hopital\\AdministrationBundle\\Entity\\Service' . "\0" . 'id', '' . "\0" . 'Hopital\\AdministrationBundle\\Entity\\Service' . "\0" . 'libelle');
+            return ['__isInitialized__', '' . "\0" . 'Hopital\\AdministrationBundle\\Entity\\Service' . "\0" . 'id', '' . "\0" . 'Hopital\\AdministrationBundle\\Entity\\Service' . "\0" . 'libelle'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Hopital\\AdministrationBundle\\Entity\\Service' . "\0" . 'id', '' . "\0" . 'Hopital\\AdministrationBundle\\Entity\\Service' . "\0" . 'libelle');
+        return ['__isInitialized__', '' . "\0" . 'Hopital\\AdministrationBundle\\Entity\\Service' . "\0" . 'id', '' . "\0" . 'Hopital\\AdministrationBundle\\Entity\\Service' . "\0" . 'libelle'];
     }
 
     /**
@@ -97,7 +97,7 @@ class Service extends \Hopital\AdministrationBundle\Entity\Service implements \D
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class Service extends \Hopital\AdministrationBundle\Entity\Service implements \D
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -183,7 +183,7 @@ class Service extends \Hopital\AdministrationBundle\Entity\Service implements \D
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -194,7 +194,7 @@ class Service extends \Hopital\AdministrationBundle\Entity\Service implements \D
     public function setLibelle($libelle)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLibelle', array($libelle));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLibelle', [$libelle]);
 
         return parent::setLibelle($libelle);
     }
@@ -205,7 +205,7 @@ class Service extends \Hopital\AdministrationBundle\Entity\Service implements \D
     public function getLibelle()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLibelle', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLibelle', []);
 
         return parent::getLibelle();
     }
