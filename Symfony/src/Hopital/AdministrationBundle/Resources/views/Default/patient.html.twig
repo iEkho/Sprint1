@@ -2,7 +2,7 @@
 {% block corps %}
 <h2>Les patients</h2>
 <table>
-<tr><th>Nom</th><th>Prénom</th><th>Date de naissance</th><th>adresse</th><th>Numéro sécu</th><th>mail</th><th>Assurance</th></tr>
+<tr><th>Nom</th><th>Prénom</th><th>Date de naissance</th><th>adresse</th><th>Numéro sécurité sociale</th><th>mail</th><th>Assurance</th></tr>
 {% for patient in lesPatients %}
 <tr>
 	<td>{{patient.getNom()}}</td>

@@ -111,7 +111,7 @@ class DefaultController extends Controller
       $em=$this->getDoctrine()->getManager();
       $repository=$em->getRepository('HopitalAdministrationBundle:Chambre');
       $uneChambre=$repository->find($id);
-      $query = $em->createQuery('DELETE FROM HopitalAdministrationBundle:Sejour C WHERE C.lachambre = :id');
+      $query = $em->createQuery('DELETE FROM HopitalAdministrationBundle:Sejour S WHERE S.lachambre = :id');
       $query->setParameter('id', $id);
       $query->execute();
       $em-> remove($uneChambre);
@@ -168,7 +168,7 @@ class DefaultController extends Controller
         $formBuilder->add('prenom','text',array('label'=>'Saisir le prenom'));
         $formBuilder->add('dateNaiss','date',array('label'=>'Saisir la date de naissance'));
         $formBuilder->add('adresse','text',array('label'=>'Saisir l\'adresse'));
-        $formBuilder->add('numSecu','text',array('label'=>'Saisir le numéro de sécurité social', 'max_length'=>15));
+        $formBuilder->add('numSecu','text',array('label'=>'Saisir le numéro de sécurité sociale', 'max_length'=>15));
         $formBuilder->add('mail','text',array('label'=>'Saisir le mail'));
         $formBuilder->add('estAssure','checkbox',array('label'=>'Cocher si il est assuré','required'=>false));
         $formBuilder->add('Ajouter','submit');

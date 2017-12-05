@@ -21,25 +21,25 @@ class __TwigTemplate_21add7cc97e457ae0b630f82c7ccbf4a0765c66288110024c0dddf6fbd5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0af208cbe1e57dd3ca4f18689e26c80a591c4b6ed4fa52b2dce9a644a957a038 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0af208cbe1e57dd3ca4f18689e26c80a591c4b6ed4fa52b2dce9a644a957a038->enter($__internal_0af208cbe1e57dd3ca4f18689e26c80a591c4b6ed4fa52b2dce9a644a957a038_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:patient.html.twig"));
+        $__internal_b1065657ac748f416e9a44a306d1ef2e0002ffb26243f1a0bbf747bced53db06 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b1065657ac748f416e9a44a306d1ef2e0002ffb26243f1a0bbf747bced53db06->enter($__internal_b1065657ac748f416e9a44a306d1ef2e0002ffb26243f1a0bbf747bced53db06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:patient.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0af208cbe1e57dd3ca4f18689e26c80a591c4b6ed4fa52b2dce9a644a957a038->leave($__internal_0af208cbe1e57dd3ca4f18689e26c80a591c4b6ed4fa52b2dce9a644a957a038_prof);
+        $__internal_b1065657ac748f416e9a44a306d1ef2e0002ffb26243f1a0bbf747bced53db06->leave($__internal_b1065657ac748f416e9a44a306d1ef2e0002ffb26243f1a0bbf747bced53db06_prof);
 
     }
 
     // line 2
     public function block_corps($context, array $blocks = array())
     {
-        $__internal_c8669ccd4f96ce9bebfbcda4b825253e0b035894f0cec209f2ceed7d3c8b4430 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c8669ccd4f96ce9bebfbcda4b825253e0b035894f0cec209f2ceed7d3c8b4430->enter($__internal_c8669ccd4f96ce9bebfbcda4b825253e0b035894f0cec209f2ceed7d3c8b4430_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
+        $__internal_2bdc9ed976caa2c0596ee87986b7f8d43ef04699b675ab86292d2926d6f63b3f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2bdc9ed976caa2c0596ee87986b7f8d43ef04699b675ab86292d2926d6f63b3f->enter($__internal_2bdc9ed976caa2c0596ee87986b7f8d43ef04699b675ab86292d2926d6f63b3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
 
         // line 3
         echo "<h2>Les patients</h2>
 <table>
-<tr><th>Nom</th><th>Prénom</th><th>Date de naissance</th><th>adresse</th><th>Numéro sécu</th><th>mail</th><th>Assurance</th></tr>
+<tr><th>Nom</th><th>Prénom</th><th>Date de naissance</th><th>adresse</th><th>Numéro sécurité sociale</th><th>mail</th><th>Assurance</th></tr>
 ";
         // line 6
         $context['_parent'] = $context;
@@ -100,7 +100,7 @@ class __TwigTemplate_21add7cc97e457ae0b630f82c7ccbf4a0765c66288110024c0dddf6fbd5
         echo "</table>
 ";
         
-        $__internal_c8669ccd4f96ce9bebfbcda4b825253e0b035894f0cec209f2ceed7d3c8b4430->leave($__internal_c8669ccd4f96ce9bebfbcda4b825253e0b035894f0cec209f2ceed7d3c8b4430_prof);
+        $__internal_2bdc9ed976caa2c0596ee87986b7f8d43ef04699b675ab86292d2926d6f63b3f->leave($__internal_2bdc9ed976caa2c0596ee87986b7f8d43ef04699b675ab86292d2926d6f63b3f_prof);
 
     }
 
@@ -125,7 +125,7 @@ class __TwigTemplate_21add7cc97e457ae0b630f82c7ccbf4a0765c66288110024c0dddf6fbd5
 {% block corps %}
 <h2>Les patients</h2>
 <table>
-<tr><th>Nom</th><th>Prénom</th><th>Date de naissance</th><th>adresse</th><th>Numéro sécu</th><th>mail</th><th>Assurance</th></tr>
+<tr><th>Nom</th><th>Prénom</th><th>Date de naissance</th><th>adresse</th><th>Numéro sécurité sociale</th><th>mail</th><th>Assurance</th></tr>
 {% for patient in lesPatients %}
 <tr>
 \t<td>{{patient.getNom()}}</td>
