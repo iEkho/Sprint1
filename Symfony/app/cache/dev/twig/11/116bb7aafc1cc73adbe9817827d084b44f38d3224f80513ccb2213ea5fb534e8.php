@@ -21,20 +21,20 @@ class __TwigTemplate_821c5b5a8e1761f1c082c2cc8e20ac879ad368f4c60600d5bb365db6719
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d92b0dbb2fc68d1866f7ac05229520750087c5ddfcb4ea6e4af76d32e5bed6b0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d92b0dbb2fc68d1866f7ac05229520750087c5ddfcb4ea6e4af76d32e5bed6b0->enter($__internal_d92b0dbb2fc68d1866f7ac05229520750087c5ddfcb4ea6e4af76d32e5bed6b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:newPatient.html.twig"));
+        $__internal_fc95c43158b5d5b8d1c7c304b4315f379d535dbc2018c50050862fa416cdc4fb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fc95c43158b5d5b8d1c7c304b4315f379d535dbc2018c50050862fa416cdc4fb->enter($__internal_fc95c43158b5d5b8d1c7c304b4315f379d535dbc2018c50050862fa416cdc4fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:newPatient.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d92b0dbb2fc68d1866f7ac05229520750087c5ddfcb4ea6e4af76d32e5bed6b0->leave($__internal_d92b0dbb2fc68d1866f7ac05229520750087c5ddfcb4ea6e4af76d32e5bed6b0_prof);
+        $__internal_fc95c43158b5d5b8d1c7c304b4315f379d535dbc2018c50050862fa416cdc4fb->leave($__internal_fc95c43158b5d5b8d1c7c304b4315f379d535dbc2018c50050862fa416cdc4fb_prof);
 
     }
 
     // line 2
     public function block_corps($context, array $blocks = array())
     {
-        $__internal_7718e93bfe2c8b6c456d6237eaab56a8482b6f8f5b64386a55e2375d311a3fe1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7718e93bfe2c8b6c456d6237eaab56a8482b6f8f5b64386a55e2375d311a3fe1->enter($__internal_7718e93bfe2c8b6c456d6237eaab56a8482b6f8f5b64386a55e2375d311a3fe1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
+        $__internal_5f09710e6a824658cca42c611a34fb0c33c52512ba249ef7d7b353430a6e20a8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5f09710e6a824658cca42c611a34fb0c33c52512ba249ef7d7b353430a6e20a8->enter($__internal_5f09710e6a824658cca42c611a34fb0c33c52512ba249ef7d7b353430a6e20a8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
 
         // line 3
         echo "<h2>Ajout d'un patient</h2>
@@ -46,7 +46,7 @@ class __TwigTemplate_821c5b5a8e1761f1c082c2cc8e20ac879ad368f4c60600d5bb365db6719
 </form>
 ";
         
-        $__internal_7718e93bfe2c8b6c456d6237eaab56a8482b6f8f5b64386a55e2375d311a3fe1->leave($__internal_7718e93bfe2c8b6c456d6237eaab56a8482b6f8f5b64386a55e2375d311a3fe1_prof);
+        $__internal_5f09710e6a824658cca42c611a34fb0c33c52512ba249ef7d7b353430a6e20a8->leave($__internal_5f09710e6a824658cca42c611a34fb0c33c52512ba249ef7d7b353430a6e20a8_prof);
 
     }
 

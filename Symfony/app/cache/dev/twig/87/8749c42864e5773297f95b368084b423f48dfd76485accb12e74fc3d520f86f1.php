@@ -15,8 +15,8 @@ class __TwigTemplate_895b91c858f9e69a5b80d87a858de338db3edb285218c1f7b79591744b9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cd8bcaadef5852a7fa03d534f3e769816572060206a2aa8257fc1e29b0bf7a5d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cd8bcaadef5852a7fa03d534f3e769816572060206a2aa8257fc1e29b0bf7a5d->enter($__internal_cd8bcaadef5852a7fa03d534f3e769816572060206a2aa8257fc1e29b0bf7a5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/traces.txt.twig"));
+        $__internal_38021ebaa8817163406585f3aaae28d22695ff7101a2a2652da665f158cee13e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_38021ebaa8817163406585f3aaae28d22695ff7101a2a2652da665f158cee13e->enter($__internal_38021ebaa8817163406585f3aaae28d22695ff7101a2a2652da665f158cee13e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/traces.txt.twig"));
 
         // line 1
         if (twig_length_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["exception"]) || array_key_exists("exception", $context) ? $context["exception"] : (function () { throw new Twig_Error_Runtime('Variable "exception" does not exist.', 1, $this->getSourceContext()); })()), "trace", array()))) {
@@ -35,7 +35,7 @@ class __TwigTemplate_895b91c858f9e69a5b80d87a858de338db3edb285218c1f7b79591744b9
             $context = array_intersect_key($context, $_parent) + $_parent;
         }
         
-        $__internal_cd8bcaadef5852a7fa03d534f3e769816572060206a2aa8257fc1e29b0bf7a5d->leave($__internal_cd8bcaadef5852a7fa03d534f3e769816572060206a2aa8257fc1e29b0bf7a5d_prof);
+        $__internal_38021ebaa8817163406585f3aaae28d22695ff7101a2a2652da665f158cee13e->leave($__internal_38021ebaa8817163406585f3aaae28d22695ff7101a2a2652da665f158cee13e_prof);
 
     }
 
