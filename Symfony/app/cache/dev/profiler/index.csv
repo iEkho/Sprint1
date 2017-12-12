@@ -114,3 +114,6 @@ c9aaaa,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/s
 59535f,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/suppService?id=5,1512484788,,302
 140f12,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/service,1512484789,,200
 5400c4,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/viewChambre,1512484792,,200
+1567a9,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/accueil,1513081117,,200
+ade336,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/patient,1513081123,,200
+f70399,::1,GET,http://localhost/desprez/Symfony/web/app_dev.php/administration/newpatient,1513081242,,200

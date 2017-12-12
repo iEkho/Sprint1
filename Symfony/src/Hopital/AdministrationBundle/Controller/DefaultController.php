@@ -142,7 +142,7 @@ class DefaultController extends Controller
       $formBuilder->add('prenom','text',array('label'=>'Saisir le prenom'));
       $formBuilder->add('dateNaiss','date',array('label'=>'Saisir la date de naissance'));
       $formBuilder->add('adresse','text',array('label'=>'Saisir l\'adresse'));
-      $formBuilder->add('numSecu','text',array('label'=>'Saisir le numéro de sécurité social', 'max_length'=>15));
+      $formBuilder->add('numSecu','text',array('label'=>'Saisir le numéro de sécurité social', 'max_length'=>15 , 'min_length'=>15));
       $formBuilder->add('mail','text',array('label'=>'Saisir le mail'));
       $formBuilder->add('estAssure','checkbox',array('label'=>'Cocher si il est assuré', 'required'=>false));
       $formBuilder->add('Mettre a jour','submit');
