@@ -49,6 +49,12 @@ hopital_administration_modifChambre:
 hopital_administration_suppChambre:
     path:     /suppChambre
     defaults: { _controller: HopitalAdministrationBundle:Default:suppChambre }
-hopital_administration_login:
-    path:     /login
-    defaults: { _Controller: HopitalAdministrationBundle:Security:login}
+login:
+  path: /login
+  defaults: { _controller: HopitalAdministrationBundle:Security:login }
+
+login_check:
+  path: /login_check
+
+logout:
+  path: /logout

@@ -195,9 +195,25 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\DefaultController::suppChambreAction',  '_route' => 'hopital_administration_suppChambre',);
             }
 
-            // hopital_administration_login
-            if ('/administration/login' === $pathinfo) {
-                return array (  '_Controller' => 'HopitalAdministrationBundle:Security:login',  '_route' => 'hopital_administration_login',);
+            if (0 === strpos($pathinfo, '/administration/log')) {
+                if (0 === strpos($pathinfo, '/administration/login')) {
+                    // login
+                    if ('/administration/login' === $pathinfo) {
+                        return array (  '_controller' => 'Hopital\\AdministrationBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login',);
+                    }
+
+                    // login_check
+                    if ('/administration/login_check' === $pathinfo) {
+                        return array('_route' => 'login_check');
+                    }
+
+                }
+
+                // logout
+                if ('/administration/logout' === $pathinfo) {
+                    return array('_route' => 'logout');
+                }
+
             }
 
         }
