@@ -28,12 +28,12 @@ security:
 
             form_login:
               login_path: /administration/login
-              check_path: /administration/login
+              check_path: /administration/login_check
                         # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
 
     access_control:
         # require ROLE_ADMIN for /admin*
-        - { path: ^/, roles: ROLE_ADMIN }
+        - { path: ^/administration/patient, roles: ROLE_ADMIN }
 
 
             # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate

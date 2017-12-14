@@ -26,7 +26,6 @@ class SecurityController extends Controller
                 $error = '';
             }
 
-
             return $this->render(
                 'HopitalAdministrationBundle:Security:login.html.twig',
                 array(

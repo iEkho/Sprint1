@@ -1,7 +1,7 @@
 {% extends 'HopitalAdministrationBundle:Default:index.html.twig' %}
 {% block corps %}
     {% if error %}
-        <div>{{ error.message }}</div>
+        <div>{{ error }}</div>
     {% endif %}
 
     <form action="{{ path('login_check') }}" method="post">

@@ -21,20 +21,20 @@ class __TwigTemplate_e5067c2e934118460413ead6a24589550877062791697c3b238ae2b2862
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9f1c843867f87112dc62445e40e5f451c15ef4f8f2b6df966a2053a51443467f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9f1c843867f87112dc62445e40e5f451c15ef4f8f2b6df966a2053a51443467f->enter($__internal_9f1c843867f87112dc62445e40e5f451c15ef4f8f2b6df966a2053a51443467f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:chambre.html.twig"));
+        $__internal_ab6b8d81a01176e2c525aead2170379696735189a2196d6df8bbfa72499f5fe2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ab6b8d81a01176e2c525aead2170379696735189a2196d6df8bbfa72499f5fe2->enter($__internal_ab6b8d81a01176e2c525aead2170379696735189a2196d6df8bbfa72499f5fe2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "HopitalAdministrationBundle:Default:chambre.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9f1c843867f87112dc62445e40e5f451c15ef4f8f2b6df966a2053a51443467f->leave($__internal_9f1c843867f87112dc62445e40e5f451c15ef4f8f2b6df966a2053a51443467f_prof);
+        $__internal_ab6b8d81a01176e2c525aead2170379696735189a2196d6df8bbfa72499f5fe2->leave($__internal_ab6b8d81a01176e2c525aead2170379696735189a2196d6df8bbfa72499f5fe2_prof);
 
     }
 
     // line 2
     public function block_corps($context, array $blocks = array())
     {
-        $__internal_ef31306ba365e160eecee89e7af646cd3eb9b8981f63dd675d45fd5f2999b89d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ef31306ba365e160eecee89e7af646cd3eb9b8981f63dd675d45fd5f2999b89d->enter($__internal_ef31306ba365e160eecee89e7af646cd3eb9b8981f63dd675d45fd5f2999b89d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
+        $__internal_83512ffaefc46e8ab8db04deab15153b395fd2cec0a5806182e9f8df98f3ce63 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_83512ffaefc46e8ab8db04deab15153b395fd2cec0a5806182e9f8df98f3ce63->enter($__internal_83512ffaefc46e8ab8db04deab15153b395fd2cec0a5806182e9f8df98f3ce63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "corps"));
 
         // line 3
         echo "<h2>Les chambres</h2>
@@ -80,7 +80,7 @@ class __TwigTemplate_e5067c2e934118460413ead6a24589550877062791697c3b238ae2b2862
         echo "</table>
 ";
         
-        $__internal_ef31306ba365e160eecee89e7af646cd3eb9b8981f63dd675d45fd5f2999b89d->leave($__internal_ef31306ba365e160eecee89e7af646cd3eb9b8981f63dd675d45fd5f2999b89d_prof);
+        $__internal_83512ffaefc46e8ab8db04deab15153b395fd2cec0a5806182e9f8df98f3ce63->leave($__internal_83512ffaefc46e8ab8db04deab15153b395fd2cec0a5806182e9f8df98f3ce63_prof);
 
     }
 
