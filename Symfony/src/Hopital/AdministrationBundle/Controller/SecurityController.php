@@ -4,6 +4,7 @@ namespace Hopital\AdministrationBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Security\Core\SecurityContextInterface;
 
 class SecurityController extends Controller
 {
@@ -32,5 +33,11 @@ class SecurityController extends Controller
                     'error'         => $error,
                 )
             );
+  }
+  public function logoutAction()
+  {
+    $_SESSION=array();
+    session_destroy();
+    return $this->redirectToroute('hopital_administration_homepage');
   }
 }
